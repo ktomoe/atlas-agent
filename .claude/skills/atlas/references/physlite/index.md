@@ -8,6 +8,7 @@ Objects in PHYSLITE are already calibrated, so no CP tools are required.
 Every branch name, type, `m_persKey` and "not readable by uproot" statement in
 this directory was **checked against ATLAS Open Data (Run 2) files**, not taken
 from documentation. Verified 2026-09-01 with uproot 5.7.6 and awkward 2.13.0.
+It does not guarantee anything about the specific file at hand, nor is it intended to.
 
 ## Reference map
 | Topic | Reference |
