@@ -69,6 +69,11 @@ for chunk in uproot.iterate(files, branches, step_size="100 MB"):
         # do something
 ```
 
+### Parallel processing
+File-level parallelism is also appropriate, for example using `multiprocessing.Pool`. 
+Files are independent, may contain different sets of AuxDyn branches,
+and can be processed in parallel for a several-fold speedup.
+
 ## ElementLink branches
 The on-disk layout depends on how many links each object holds,
 and the two layouts are read with **different syntax**.

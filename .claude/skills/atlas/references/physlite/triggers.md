@@ -5,6 +5,9 @@
 |---|---|---|
 | AnalysisTrigMatch_HLT_{chain} | Offline objects matched to the HLT chain `{chain}`. One container per chain. | AuxDyn |
 
+### Additional information
+* There are hundreds of AnalysisTrigMatch_HLT* containers. To minimize token usage, narrow them down with `filter_name`.
+
 ### Trigger naming convention
 {multiplicity|none}{e|mu|g}{threshold in GeV}{_qualifier}...{_L1seed|none}
 

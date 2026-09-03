@@ -18,7 +18,7 @@
 | eta | vector<float> | Photon pseudorapidity (η).| |
 | phi | vector<float> | Photon azimuthal angle (φ). | rad |
 | m | vector<float> | Photon mass. | MeV |
-| OQ | vector<unsigned int> | Cluster quality, bit-packed. A set bit is a *defect*: pass is `(OQ & 0x5A6) == 0`, using the official mask `BADCLUSELECTRON = 0x5A6`.| |
+| OQ | vector<unsigned int> | Cluster quality, bit-packed. A set bit is a *defect*: pass is `(OQ & 0x85A6) == 0`, using the official mask `BADCLUSPHOTON = 0x85A6`.| |
 | topoetcone{20,40} | vector<float> | Calo-based isolation in {0.2. 0.4} cone.| MeV |
 | topoetcone{20,40}ptCorrection | vector<float> | Leakage correction, R = {0.2. 0.4}, **already applied to topoetcone{20,40}**. | MeV |
 | caloClusterLinks | vector<vector<ElementLink<DataVector<xAOD::CaloCluster_v1>>>> | Link from photon to calo cluster. Link to `egammaClusters`.||
