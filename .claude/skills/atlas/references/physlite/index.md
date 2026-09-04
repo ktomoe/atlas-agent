@@ -13,19 +13,20 @@ It does not guarantee anything about the specific file at hand, nor is it intend
 ## Reference map
 | Topic | Reference | Keywords |
 |---|---|---|
-| Reading PHYSLITE files (uproot) | [io.md](io.md) ||
-| Event variables and examples | [events.md](events.md) ||
+| Reading PHYSLITE files (uproot) | [io.md](io.md) | Concatenate vs iterate; ElementLink split vs not-split|
+| Event variables and examples | [events.md](events.md) | data or MC; GRL / lumiBlock|
 | Electron variables and examples | [electrons.md](electrons.md) ||
-| Photon variables and examples | [photons.md](photons.md) | FSR recovery |
+| Photon variables and examples | [photons.md](photons.md) ||
 | Muon variables and examples | [muons.md](muons.md) ||
 | Tau variables and examples | [taus.md](taus.md) ||
 | Jet variables and examples | [jets.md](jets.md) ||
-| Track variables and examples | [tracks.md](tracks.md) ||
-| Vertex variables and examples | [vertices.md](vertices.md) ||
-| Trigger variables and examples | [triggers.md](triggers.md) ||
+| Track variables and examples | [tracks.md](tracks.md) | d0 significance; z0 sin(theta) |
+| Vertex variables and examples | [vertices.md](vertices.md) | Hardest primary vertex |
+| Trigger variables and examples | [triggers.md](triggers.md) | Trigger matching |
+| Trigger advanced examples | [triggers-advanced.md](triggers-advanced.md) | Prescale; HLT decode|
 | Cluster variables and examples | [clusters.md](clusters.md) ||
 | Truth variables and examples | [truths.md](truths.md) ||
-| Kinematic treatment | [kinematics.md](kinematics.md) ||
-| Key hash values (m_persKey) | [keyhash.md](keyhash.md) ||
+| Kinematic treatment | [kinematics.md](kinematics.md) | Invariant mass from four-vectors; overlap removal|
+| Key hash values (m_persKey) | [keyhash.md](keyhash.md) |Resolve an unknown `m_persKey`|
 | Metadata for Run2 Open data | [run2opendata.md](run2opendata.md) ||
-| Vector optimization examples (awkward) | [optimizations.md](optimizations.md) | ElementLink gathering; option-type pitfalls; vectorized ΔR and overlap removal |
+| Vector optimization examples (awkward) | [vectorized-recipes.md](vectorized-recipes.md) | ElementLink gathering; option-type pitfalls; vectorized ΔR and overlap removal |

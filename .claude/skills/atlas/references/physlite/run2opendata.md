@@ -60,6 +60,10 @@ mean a given file holds its matching branch — test it first, see *Pass trigger
 | HLT_2e12_lhloose_mu10 | L1_2EM8VH_MU10 | e-mu | 97.98% | 31.33% |
 | HLT_2e12_lhloose_nod0_mu10 | L1_2EM8VH_MU10 | e-mu | 97.98% | 98.37% |
 
+### Gotchas when subsetting
+* **Never scale a subset result by file count**
+  Files are typically ordered by run; early files carry far less luminosity.
+
 ## Monte Carlo Metadata
 One representative sample per major SM process, from the `2024r-pp` release (see
 *Extending this table*).

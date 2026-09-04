@@ -36,6 +36,7 @@
 * Mass of muon is not available in the containers. Refer to ../parameters.md.
 * `truthParticleLink` refers to a container that cannot be resolved, use `TruthLink`.
 * Do not assume that the contents are sorted by pT.
+* `_CloseByCorr` denotes a version corrected by subtracting contributions from nearby leptons.
 
 ## Examples of pseudo code
 ### Track links

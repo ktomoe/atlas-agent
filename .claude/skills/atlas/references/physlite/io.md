@@ -24,18 +24,22 @@ branches = [
 ### Check the branch names
 The per-container references list the branches an analysis normally needs, not
 everything a file holds. Resolve any other name against the file itself.
+A PHYSLITE `CollectionTree` holds ~700 branches and a single container can hold 90.
+To minimize token usage, narrow them down with `filter_name`.
+
 ```python
 tree = uproot.open(next(iter(files)))["CollectionTree"]
-tree.keys(filter_name="AnalysisMuonsAuxDyn.*") # one container
-tree.keys(filter_name="AnalysisElectronsAuxDyn.*cone*") # isolation variants
-tree.keys(filter_name="*TrigMatchedObjects")            # chains stored in this file
+"AnalysisMuonsAuxDyn.quality" in tree                    # prefer this
+tree.keys(filter_name="AnalysisElectronsAuxDyn.*cone*")  # then this
+tree.keys(filter_name="AnalysisMuonsAuxDyn.*")           # only if you must
 ```
 Test existence with `name in tree`, not with `name in tree.keys()`: for a
 split branch the two disagree.
 
 #### Dynamic branches are per file
 AuxDyn branches are written only when the producer filled them, so the branch
-set differs from file to file. Trigger matching is the usual victim.
+set differs from file to file. Trigger matching is the most common case, but
+any low-multiplicity container may be absent.
 
 ### Count the total events
 ```python
@@ -68,6 +72,7 @@ for chunk in uproot.iterate(files, branches, step_size="100 MB"):
     for event in chunk:
         # do something
 ```
+See ./vectorized-recipes.md for chunk processing.
 
 ### Parallel processing
 File-level parallelism is also appropriate, for example using `multiprocessing.Pool`. 
