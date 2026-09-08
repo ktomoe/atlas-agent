@@ -28,5 +28,5 @@ It does not guarantee anything about the specific file at hand, nor is it intend
 | Truth variables and examples | [truths.md](truths.md) ||
 | Kinematic treatment | [kinematics.md](kinematics.md) | Invariant mass from four-vectors; overlap removal|
 | Key hash values (m_persKey) | [keyhash.md](keyhash.md) |Resolve an unknown `m_persKey`|
-| Metadata for Run2 Open data | [run2opendata.md](run2opendata.md) ||
+| Metadata for Run2 Open data | [run2opendata.md](run2opendata.md) | Trigger chain; Cross section; MC scaling|
 | Vector optimization examples (awkward) | [vectorized-recipes.md](vectorized-recipes.md) | ElementLink gathering; option-type pitfalls; vectorized ΔR and overlap removal |
