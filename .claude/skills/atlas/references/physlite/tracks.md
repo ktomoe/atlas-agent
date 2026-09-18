@@ -28,18 +28,14 @@
 | Name | Type | Definition | Unit |
 |---|---|---|---|
 | chiSquared | vector<float> | Chi square of fit. |  |
-| numberOfPixelHits | vector<unsigned char> | Number of Pixel hits. |  |
-| numberOfSCTHits | vector<unsigned char> | Number of SCT hits. |  |
+| numberOf{Pixel,SCT}Hits | vector<unsigned char> | Number of {Pixel,SCT} hits. |  |
 
 ### {InDetTrackParticles, CombinedMuonTrackParticles} branches
 | Name | Type | Definition | Unit |
 |---|---|---|---|
-| numberOfPixelHoles | vector<unsigned char> | Number of Pixel holes. |  |
-| numberOfSCTHoles | vector<unsigned char> | Number of SCT holes. |  |
-| numberOfTRTHits | vector<unsigned char> | Number of TRT hits. |  |
-| numberOfTRTOutliers | vector<unsigned char> | Number of TRT outliers on the track. |  |
-| numberOfPixelDeadSensors | vector<unsigned char> | Number of Pixel dead sensors on the track. |  |
-| numberOfSCTDeadSensors | vector<unsigned char> | Number of SCT dead sensors on the track. |  |
+| numberOf{Pixel,SCT}Holes | vector<unsigned char> | Number of {Pixel,SCT} holes. |  |
+| numberOfTRT{Hits,Outliers} | vector<unsigned char> | Number of TRT {hits,outliers} on the track. |  |
+| numberOf{Pixel,SCT}DeadSensors | vector<unsigned char> | Number of {Pixel,SCT} dead sensors on the track. |  |
 | numberDoF | vector<float> | Number of degrees of freedom of fit. |  |
 
 ### {InDetTrackParticles, GSFTrackParticles} branches
@@ -52,14 +48,12 @@
 |---|---|---|---|
 | TTVA_AMVFWeights | vector<vector<float>> | Weight of the track used in the fit of the corresponding vertex in TTVA_AMVFVertices during adaptive multi-vertex fitting. |  |
 | TTVA_AMVFVertices | vector<vector<ElementLink<DataVector<xAOD::Vertex_v1>>>> | Vertices this track was used in during adaptive multi-vertex fitting, index-aligned with TTVA_AMVFWeights. Links to `PrimaryVertices`. **Not split** -- see io.md. |  |
-| numberOfPixelSharedHits | vector<unsigned char> | Number of Pixel hits shared with another track. |  |
-| numberOfSCTSharedHits | vector<unsigned char> | Number of SCT hits shared with another track. |  |
+| numberOf{Pixel,SCT}SharedHits | vector<unsigned char> | Number of {Pixel,SCT} hits shared with another track. |  |
 
 ### GSFTrackParticles branches
 | Name | Type | Definition | Unit |
 |---|---|---|---|
-| expectInnermostPixelLayerHit | vector<unsigned char> | Whether an innermost pixel layer hit is **expected** for this track. 0 when the track crosses a dead or disabled module. |  |
-| expectNextToInnermostPixelLayerHit | vector<unsigned char> | Whether a next-to-innermost pixel layer hit is expected for this track. |  |
+| expect{,NextTo}InnermostPixelLayerHit | vector<unsigned char> | Whether an {innermost,next-to-innermost} pixel layer hit is **expected** for this track. 0 when the track crosses a dead or disabled module. |  |
 | numberOfNextToInnermostPixelLayerHits | vector<unsigned char> | Number of next-to-innermost pixel layer hits. |  |
 | originalTrackParticle | vector<ElementLink<DataVector<xAOD::TrackParticle_v1>>> | Link from the GSF-refitted track back to the ID track it was fitted from. Link to `InDetTrackParticles`. |  |
 

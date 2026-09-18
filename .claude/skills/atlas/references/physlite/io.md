@@ -79,6 +79,18 @@ File-level parallelism is also appropriate, for example using `multiprocessing.P
 Files are independent, may contain different sets of AuxDyn branches,
 and can be processed in parallel for a several-fold speedup.
 
+```python
+import multiprocessing as mp
+
+def process_one(path):
+    return path, WORK(path)        # open, read and reduce inside the worker; return a small picklable partial
+
+with mp.Pool(N_PROC) as pool:
+    partials = dict(pool.imap_unordered(process_one, files))
+
+result = COMBINE(partials[p] for p in sorted(partials))   # fixed order -> deterministic
+```
+
 ## ElementLink branches
 The on-disk layout depends on how many links each object holds,
 and the two layouts are read with **different syntax**.

@@ -17,17 +17,14 @@
 | childLinks | vector<vector<ElementLink<DataVector<xAOD::TruthParticle_v1>>>> | Link from truth particle to truth children. | |
 | parentLinks | vector<vector<ElementLink<DataVector<xAOD::TruthParticle_v1>>>> | Link from truth particle to truth parents. | |
 | pdgId | vector<int> | Truth electron pdg identification. electron: +/-11, muon: +/-13 | |
-| px | vector<float> | Truth bare particle momentum x. | MeV |
-| py | vector<float> | Truth bare particle momentum y. | MeV |
-| pz | vector<float> | Truth bare particle momentum z. | MeV |
+| {px, py, pz} | vector<float> | Truth bare particle momentum {x, y, z}. | MeV |
 | m | vector<float> | Truth bare particle mass. | MeV |
 | status | vector<int> | Truth particle status. |  |
 
 ## MET_Truth branches
 | Name | Type | Definition | Unit |
 |---|---|---|---|
-| mpx | vector<float> | Truth missing transverse energy x component. | MeV |
-| mpy | vector<float> | Truth missing transverse energy y component. | MeV |
+| mp{x, y} | vector<float> | Truth missing transverse energy {x, y} component. | MeV |
 | name | vector<string> | Truth missing transverse energy core soft term name. | |
 | source | vector<ULong64_t> | Truth missing transverse energy core soft term source bitmask. | |
 | sumet | vector<float> | Truth missing transverse energy core soft term scalar sum pT. | MeV |

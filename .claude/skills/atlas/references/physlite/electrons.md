@@ -8,11 +8,7 @@
 ## AnalysisElectrons branches
 | Name | Type | Definition | Unit |
 |---|---|---|---|
-| DFCommonElectronsLHVeryLoose | vector<int8> | Likelihood identification Very Loose decision. 1: pass, 0: not pass||
-| DFCommonElectronsLHLoose | vector<int8> | Likelihood identification Loose decision. 1: pass, 0: not pass||
-| DFCommonElectronsLHLooseBL | vector<int8> | Likelihood identification Loose decision with B layer. 1: pass, 0: not pass||
-| DFCommonElectronsLHMedium | vector<int8> | Likelihood identification Medium decision. 1: pass, 0: not pass||
-| DFCommonElectronsLHTight | vector<int8> | Likelihood identification Tight decision. 1: pass, 0: not pass||
+| DFCommonElectronsLH{VeryLoose,Loose,LooseBL,Medium,Tight} | vector<int8> | Likelihood identification {Very Loose,Loose,Loose with B layer,Medium,Tight} decision. 1: pass, 0: not pass||
 | author | vector<unsigned short> | 0x1: Electron, 0x2: Photon, 0x10: Ambiguous, 0x20: Forward Electron | |
 | pt | vector<float> | Electron transverse momentum in MeV. | MeV |
 | eta | vector<float> | Electron pseudorapidity (η). **Not the cluster η**: fiducial and crack cuts are defined on the cluster.| |

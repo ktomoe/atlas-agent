@@ -10,9 +10,7 @@
 | Name | Type | Definition | Unit |
 |---|---|---|---|
 | vertexType | vector<short> | Enum defining the type of vertex created in the offline reconstruction. 0: dummy/NoVtx, 1: primary vertices, 2:SecVtx, 3: PileUp, 4:ConvVtx, 5:V0Vtx||
-| x | vector<float> | Primary vertex position in x. | mm |
-| y | vector<float> | Primary vertex position in y. | mm |
-| z | vector<float> | Primary vertex position in z. | mm |
+| {x,y,z} | vector<float> | Primary vertex position in {x,y,z}. | mm |
 | trackParticleLinks | vector<vector<ElementLink<DataVector<xAOD::TrackParticle_v1>>>> | Link from primary vertex to corresponding tracks. | |
 
 ## FourLeptonVertices branches

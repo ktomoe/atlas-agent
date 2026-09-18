@@ -3,25 +3,25 @@
 ## List of containers
 | Name | Purpose | Prefix |
 |---|---|---|
-| AnalysisTrigMatch_HLT_{chain} | Offline objects matched to the HLT chain `{chain}`. One container per chain. | AuxDyn |
+| AnalysisTrigMatch_{chain} | Offline objects matched to the HLT chain `{chain}`. One container per chain. | AuxDyn |
 
 ### Additional information
-* There are hundreds of AnalysisTrigMatch_HLT* containers. To minimize token usage, narrow them down with `filter_name`.
+* There are hundreds of AnalysisTrigMatch_* containers. To minimize token usage, narrow them down with `filter_name`.
 
 ### Trigger naming convention
-{multiplicity|none}{e|mu|g}{threshold in GeV}{_qualifier}...{_L1seed|none}
+HLT_{multiplicity|none}{e|mu|g}{threshold in GeV}{_qualifier}...{_L1seed|none}
 
-* `e120_lhloose` -> single electron, 120 GeV threshold, likelihood Loose ID
-* `2mu10` -> two muons, 10 GeV threshold each
-* `mu24_imedium` -> single muon, 24 GeV, medium isolation
-* `e24_lhmedium_iloose_L1EM20VH` -> single electron, 24 GeV, likelihood Medium ID,
+* `HLT_e120_lhloose` -> single electron, 120 GeV threshold, likelihood Loose ID
+* `HLT_2mu10` -> two muons, 10 GeV threshold each
+* `HLT_mu24_imedium` -> single muon, 24 GeV, medium isolation
+* `HLT_e24_lhmedium_iloose_L1EM20VH` -> single electron, 24 GeV, likelihood Medium ID,
   loose isolation, seeded by the L1 item `EM20VH`
-* `g35_loose_g25_loose` -> two photons with different thresholds, spelled out separately
+* `HLT_g35_loose_g25_loose` -> two photons with different thresholds, spelled out separately
 
 Qualifiers are ID (`lhloose`, `medium`), isolation (`iloose`, `imedium`) or
 reconstruction variants (`nod0`, `msonly`) — not algorithm names.
 
-## AnalysisTrigMatch_HLT_{chain} branches
+## AnalysisTrigMatch_{chain} branches
 | Name | Type | Definition | Unit |
 |---|---|---|---|
 | TrigMatchedObjects | vector<vector<ElementLink<DataVector<xAOD::IParticle>>>> | Links to the **offline** objects that matched this chain. Outer index: one entry per matched object. Inner index: the links that object holds. ||

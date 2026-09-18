@@ -18,12 +18,8 @@
 | averageInteractionsPerCrossing | float | Mean number of interactions per crossing, averaged over the lumiblock. ||
 | RandomRunNumber | uint32 | **MC only.** Data run this MC event is assigned to by the pileup reweighting, drawn in proportion to the recorded luminosity. ||
 | PileupWeight_NOSYS | float | **MC only.** Pre-computed pileup weight. ||
-| beamPosX | float | Beam spot position in x. | mm |
-| beamPosY | float | Beam spot position in y. | mm |
-| beamPosZ | float | Beam spot position in z. | mm |
-| beamPosSigmaX | float | Beam spot width in x. | mm |
-| beamPosSigmaY | float | Beam spot width in y. | mm |
-| beamPosSigmaZ | float | Beam spot width in z. | mm |
+| beamPos{X,Y,Z} | float | Beam spot position in {x,y,z}. | mm |
+| beamPosSigma{X,Y,Z} | float | Beam spot width in {x,y,z}. | mm |
 | beamPosSigmaXY | float | Beam spot x-y covariance. | mm^2 |
 | larFlags | uint32 | LAr data-quality word. The error state is in the **top 4 bits**: `(larFlags >> 28) & 0xF` is 0 NotSet, 1 Warning, 2 Error. ||
 | tileFlags | uint32 | Tile data-quality word, same error state in the top 4 bits. The low bits carry unrelated information and are set in normal events. ||
